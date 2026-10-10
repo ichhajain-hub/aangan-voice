@@ -5,7 +5,7 @@ consultation booked on a designer's calendar; everyone else gets an honest next 
 Telegram alert with the full context, the shared dashboard shows every lead and what the line costs,
 and HubSpot holds the sales pipeline.
 
-**Stack:** Vaani (voice) → Next.js API on Vercel → Neon (Postgres) → Telegram, HubSpot. Code on GitHub.
+**Stack:** Vaani (voice) → Next.js API on Vercel → Supabase (Postgres) → Telegram, HubSpot. Code on GitHub.
 
 ## How a call flows
 
@@ -29,7 +29,7 @@ and HubSpot holds the sales pipeline.
 ## Setup
 
 1. **GitHub:** push this folder to a new repo.
-2. **Neon:** create a project, copy the connection string, then run `npm run db:setup` (reads `DATABASE_URL` from your shell or from `.env.local` after `vercel env pull`)
+2. **Supabase:** create a project, copy the Transaction pooler connection string (Connect → port 6543), then run `npm run db:setup` (reads `DATABASE_URL` from your shell or from `.env.local` after `vercel env pull`)
    (creates tables + 14 placeholder designers + a mock calendar for the next 14 days).
 3. **Vercel:** import the repo, add every variable from `.env.example`, plus `NEXT_PUBLIC_BASE_URL`
    (your Vercel URL). Deploy.
